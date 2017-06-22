@@ -1,0 +1,18 @@
+package my.ch.thread.synchronized_test;
+
+/**
+ * Created by chenh on 2017/6/21.
+ */
+public class CounterThread extends Thread{
+    protected Counter counter = null;
+
+    public CounterThread(Counter counter){
+        this.counter = counter;
+    }
+
+    public void run() {
+        for(int i=0; i<10; i++){
+            counter.add(i);
+        }
+    }
+}
